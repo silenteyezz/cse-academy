@@ -1,0 +1,19 @@
+{
+  "name": "asin-accessible-portfolio",
+  "version": "1.0.0",
+  "description": "Accessible student portfolio with Node.js backend for Asin, 2nd-year CSE undergraduate",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "accessibility",
+    "portfolio",
+    "student",
+    "wcag",
+    "nodejs",
+    "backend"
+  ],
+  "author": "Asin",
+  "license": "MIT"
+}

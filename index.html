@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Welcome to the Computer Science & Engineering Academic Portal. Access semester roadmaps, curated resources, and an interactive 10-question assessment.">
+  <meta name="theme-color" content="#0f2b48">
   <title>Welcome | CSE Academic Portal</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -59,7 +60,7 @@
         <p class="hero-tagline">
           This portal provides Computer Science &amp; Engineering students with a structured semester roadmap, recommended learning resources, and an interactive 10-question assessment with instant scoring.
         </p>
-        <div class="btn-group">
+        <div class="btn-group" role="group" aria-label="Main portal actions">
           <a href="roadmap.html" class="btn btn-primary">
             Explore Semester Roadmap
           </a>
@@ -79,9 +80,9 @@
         <div class="grid grid-2">
           
           <!-- Card 1: Roadmap & Resources -->
-          <article class="card">
-            <div class="card-header">
-              <span class="badge">Curriculum &amp; Tools</span>
+          <article class="card" aria-label="Semester Roadmap and Resources section">
+          <div class="card-header">
+          <span class="badge">Curriculum &amp; Tools</span>
               <h3 class="card-title" style="margin-top: 0.5rem;">Semester Roadmap &amp; Resources</h3>
               <p class="card-subtitle">Semesters 1 through 8 Progression</p>
             </div>
@@ -98,9 +99,9 @@
           </article>
 
           <!-- Card 2: Interactive Quiz -->
-          <article class="card">
-            <div class="card-header">
-              <span class="badge">Self-Assessment</span>
+          <article class="card" aria-label="Interactive Quiz section">
+          <div class="card-header">
+          <span class="badge">Self-Assessment</span>
               <h3 class="card-title" style="margin-top: 0.5rem;">10-Question Technical Quiz</h3>
               <p class="card-subtitle">Immediate Marks &amp; Explanations</p>
             </div>
@@ -168,3 +169,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
+
