@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to the Computer Science & Engineering Academic Portal. Access semester roadmaps, curated resources, and an interactive 10-question assessment.">
+  <title>Welcome | CSE Academic Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Accessible Skip-to-Content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="site-title">CSE Academic Portal</span>
+        <span class="site-subtitle">Computer Science &amp; Engineering Hub &bull; Asin</span>
+      </a>
+
+      <!-- Mobile Navigation Toggle -->
+      <button 
+        type="button" 
+        id="nav-toggle" 
+        class="nav-toggle-btn" 
+        aria-expanded="false" 
+        aria-controls="primary-nav" 
+        aria-label="Toggle navigation menu">
+        Menu
+      </button>
+
+      <!-- Primary Navigation: Exactly 3 Pages -->
+      <nav id="primary-nav" class="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li>
+            <a href="index.html" class="nav-link" aria-current="page">Welcome</a>
+          </li>
+          <li>
+            <a href="roadmap.html" class="nav-link">Roadmap</a>
+          </li>
+          <li>
+            <a href="quiz.html" class="nav-link">Quiz</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Landmark -->
+  <main id="main-content" tabindex="-1">
+    <div class="container">
+
+      <!-- Hero Welcome Section -->
+      <section class="hero" aria-labelledby="welcome-title">
+        <span class="badge">Academic Portal</span>
+        <h1 id="welcome-title">Welcome to the CSE Academic Hub</h1>
+        <p class="hero-tagline">
+          This portal provides Computer Science &amp; Engineering students with a structured semester roadmap, recommended learning resources, and an interactive 10-question assessment with instant scoring.
+        </p>
+        <div class="btn-group">
+          <a href="roadmap.html" class="btn btn-primary">
+            Explore Semester Roadmap
+          </a>
+          <a href="quiz.html" class="btn btn-secondary">
+            Take the 10-Question Quiz
+          </a>
+        </div>
+      </section>
+
+      <!-- Portal Overview Section -->
+      <section aria-labelledby="overview-title">
+        <h2 id="overview-title">Portal Overview</h2>
+        <p>
+          The platform is organized into three focused sections to support your academic coursework and self-evaluation:
+        </p>
+
+        <div class="grid grid-2">
+          
+          <!-- Card 1: Roadmap & Resources -->
+          <article class="card">
+            <div class="card-header">
+              <span class="badge">Curriculum &amp; Tools</span>
+              <h3 class="card-title" style="margin-top: 0.5rem;">Semester Roadmap &amp; Resources</h3>
+              <p class="card-subtitle">Semesters 1 through 8 Progression</p>
+            </div>
+            <div class="card-body">
+              <p>
+                Review core subjects from first-year programming (C, C++, Java) through core systems (Algorithms, Operating Systems, Database Management) and upper-level electives. Includes curated links to verified, free textbooks and coding platforms.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a href="roadmap.html" class="btn btn-secondary">
+                View Roadmap &rarr;
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Interactive Quiz -->
+          <article class="card">
+            <div class="card-header">
+              <span class="badge">Self-Assessment</span>
+              <h3 class="card-title" style="margin-top: 0.5rem;">10-Question Technical Quiz</h3>
+              <p class="card-subtitle">Immediate Marks &amp; Explanations</p>
+            </div>
+            <div class="card-body">
+              <p>
+                Evaluate your foundational knowledge across Data Structures, Algorithms, OOP, Memory Management, and Web Accessibility. Submitting your answers displays your total marks, percentage, and detailed answer explanations.
+              </p>
+            </div>
+            <div class="card-footer">
+              <a href="quiz.html" class="btn btn-primary">
+                Start Quiz &rarr;
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Getting Started Notice -->
+      <section aria-labelledby="start-title">
+        <div class="notice-box">
+          <h3 id="start-title" style="margin-top: 0; font-size: 1.15rem; color: var(--color-primary);">Recommended Progression</h3>
+          <p>
+            For best results, review the core concepts on the <a href="roadmap.html">Roadmap Page</a> first, then test your knowledge on the <a href="quiz.html">Quiz Page</a> to verify your technical readiness.
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h3>CSE Academic Portal</h3>
+          <p>Curated by Asin for Computer Science Engineering students.</p>
+          <p>Accessible, responsive, and standards-compliant.</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Quick Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Welcome</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Standards &amp; Accessibility</h3>
+          <p>
+            Built using semantic HTML5, high-contrast typography, and full keyboard operability.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Asin. Computer Science &amp; Engineering Academic Portal.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

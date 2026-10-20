@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="10-question technical Computer Science Engineering assessment with instant score marks and detailed concept reviews.">
+  <title>Quiz | CSE Academic Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Accessible Skip-to-Content Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header & Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="site-title">CSE Academic Portal</span>
+        <span class="site-subtitle">Computer Science &amp; Engineering Hub &bull; Asin</span>
+      </a>
+
+      <!-- Mobile Navigation Toggle -->
+      <button 
+        type="button" 
+        id="nav-toggle" 
+        class="nav-toggle-btn" 
+        aria-expanded="false" 
+        aria-controls="primary-nav" 
+        aria-label="Toggle navigation menu">
+        Menu
+      </button>
+
+      <!-- Primary Navigation: Exactly 3 Pages -->
+      <nav id="primary-nav" class="nav-menu" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li>
+            <a href="index.html" class="nav-link">Welcome</a>
+          </li>
+          <li>
+            <a href="roadmap.html" class="nav-link">Roadmap</a>
+          </li>
+          <li>
+            <a href="quiz.html" class="nav-link" aria-current="page">Quiz</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content Landmark -->
+  <main id="main-content" tabindex="-1">
+    <div class="container">
+
+      <!-- Quiz Header Banner -->
+      <section class="hero" aria-labelledby="quiz-page-title">
+        <span class="badge">Technical Assessment</span>
+        <h1 id="quiz-page-title">10-Question Computer Science Quiz</h1>
+        <p class="hero-tagline">
+          Answer the 10 multiple-choice questions below covering Data Structures, Algorithms, OOP, Memory Management, Operating Systems, and Web Standards. Your score marks and percentage will be calculated immediately upon submission.
+        </p>
+      </section>
+
+      <!-- Score Display Card (Screen Reader Live Region) -->
+      <section id="results-section" aria-live="polite" style="display: none;">
+        <div id="quiz-score-card" class="card score-banner-card">
+          <!-- Dynamically populated via JavaScript -->
+        </div>
+      </section>
+
+      <!-- Quiz Form Section -->
+      <section aria-labelledby="form-heading">
+        <h2 id="form-heading" class="sr-only">Assessment Questions</h2>
+
+        <!-- Progress Indicator -->
+        <div class="quiz-progress-bar-wrapper" role="region" aria-label="Assessment progress">
+          <div class="quiz-progress-text">
+            <span>Answered: <strong id="progress-count">0</strong> of <strong>10</strong> questions</span>
+            <span id="progress-percentage">0% Completed</span>
+          </div>
+          <div class="progress-track" aria-hidden="true">
+            <div id="progress-fill" class="progress-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <form id="cs-quiz-form" novalidate>
+          
+          <!-- Question 1 -->
+          <fieldset class="card quiz-card" id="q1-fieldset">
+            <legend class="quiz-legend">
+              <span class="badge">Question 1 of 10</span> &bull; <strong>Data Structures</strong>
+              <span class="quiz-question-text">What is the worst-case time complexity of accessing an element in an array by its index?</span>
+            </legend>
+            <div class="quiz-options-group">
+              <label class="quiz-option-label" for="q1-opt0">
+                <input type="radio" id="q1-opt0" name="q1" value="0" required>
+                <span>A) O(N)</span>
+              </label>
+              <label class="quiz-option-label" for="q1-opt1">
+                <input type="radio" id="q1-opt1" name="q1" value="1">
+                <span>B) O(log N)</span>
+              </label>
+              <label class="quiz-option-label" for="q1-opt2">
+                <input type="radio" id="q1-opt2" name="q1" value="2">
+                <span>C) O(1)</span>
+              </label>
+              <label class="quiz-option-label" for="q1-opt3">
+                <input type="radio" id="q1-opt3" name="q1" value="3">
+                <span>D) O(N²)</span>
+              </label>
+            </div>
+            <div id="q1-feedback" class="quiz-explanation" style="display: none;"></div>
+          </fieldset>
+
+          <!-- Question 2 -->
+          <fieldset class="card quiz-card" id="q2-fieldset">
+            <legend class="quiz-legend">
+              <span class="badge">Question 2 of 10</span> &bull; <strong>Algorithms</strong>
+              <span class="quiz-question-text">Which of the following sorting algorithms has the best average-case time complexity?</span>
+            </legend>
+            <div class="quiz-options-group">
+              <label class="quiz-option-label" for="q2-opt0">
+                <input type="radio" id="q2-opt0" name="q2" value="0" required>
+                <span>A) Bubble Sort</span>
+              </label>
+              <label class="quiz-option-label" for="q2-opt1">
+                <input type="radio" id="q2-opt1" name="q2" value="1">
+                <span>B) Selection Sort</span>
+              </label>
+              <label class="quiz-option-label" for="q2-opt2">
+                <input type="radio" id="q2-opt2" name="q2" value="2">
+                <span>C) QuickSort</span>
+              </label>
+              <label class="quiz-option-label" for="q2-opt3">
+                <input type="radio" id="q2-opt3" name="q2" value="3">
+                <span>D) Insertion Sort</span>
+              </label>
+            </div>
+            <div id="q2-feedback" class="quiz-explanation" style="display: none;"></div>
+          </fieldset>
+
+          <!-- Question 3 -->
+          <fieldset class="card quiz-card" id="q3-fieldset">
+            <legend class="quiz-legend">
+              <span class="badge">Question 3 of 10</span> &bull; <strong>OOP Principles</strong>
+              <span class="quiz-question-text">Which OOP principle allows a subclass to provide a specific implementation of a method that is already defined in its parent class?</span>
+            </legend>
+            <div class="quiz-options-group">
+              <label class="quiz-option-label" for="q3-opt0">
+                <input type="radio" id="q3-opt0" name="q3" value="0" required>
+                <span>A) Encapsulation</span>
+              </label>
+              <label class="quiz-option-label" for="q3-opt1">
+                <input type="radio" id="q3-opt1" name="q3" value="1">
+                <span>B) Method Overriding (Polymorphism)</span>
+              </label>
+              <label class="quiz-option-label" for="q3-opt2">
+                <input type="radio" id="q3-opt2" name="q3" value="2">
+                <span>C) Data Abstraction</span>
+              </label>
+              <label class="quiz-option-label" for="q3-opt3">
+                <input type="radio" id="q3-opt3" name="q3" value="3">
+                <span>D) Multiple Inheritance</span>
+              </label>
+            </div>
+            <div id="q3-feedback" class="quiz-explanation" style="display: none;"></div>
+          </fieldset>
+
+          <!-- Question 4 -->
+          <fieldset class="card quiz-card" id="q4-fieldset">
+            <legend class="quiz-legend">
+              <span class="badge">Question 4 of 10</span> &bull; <strong>Memory Management</strong>
+              <span class="quiz-question-text">In C and C++, which segment of memory is dynamically allocated at runtime using <code>malloc()</code> or <code>new</code>?</span>
+            </legend>
+            <div class="quiz-options-group">
+              <label class="quiz-option-label" for="q4-opt0">
+                <input type="radio" id="q4-opt0" name="q4" value="0" required>
+                <span>A) Call Stack</span>
+              </label>
+              <label class="quiz-option-label" for="q4-opt1">
+                <input type="radio" id="q4-opt1" name="q4" value="1">
+                <span>B) Text / Code Segment</span>
+              </label>
+              <label class="quiz-option-label" for="q4-opt2">
+                <input type="radio" id="q4-opt2" name="q4" value="2">
+                <span>C) Heap</span>
+              </label>
+              <label class="quiz-option-label" for="q4-opt3">
+                <input type="radio" id="q4-opt3" name="q4" value="3">
+                <span>D) CPU Register</span>
+              </label>
+            </div>
+            <div id="q4-feedback" class="quiz-explanation" style="display: none;"></div>
+          </fieldset>
+
+          <!-- Question 5 -->
+          <fieldset class="card quiz-card" id="q5-fieldset">
+            <legend class="quiz-legend">
+              <span class="badge">Question 5 of 10</span> &bull; <strong>Web Accessibility</strong>
+              <span class="quiz-question-text">What is the primary architectural purpose of semantic HTML elements like <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;main&gt;</code>?</span>
+            </legend>
+            <div class="quiz-options-group">
+              <label class="quiz-option-label" for="q5-opt0">
+                <input type="radio" id="q5-opt0" name="q5" value="0" required>
+                <span>A) They are mandatory for JavaScript compilers to run</span>
+              </label>
+              <label class="quiz-option-label" for="q5-opt1">
+                <input type="radio" id="q5-opt1" name="q5" value="1">
+                <span>B) They provide structural landmarks for screen readers and assistive technologies</span>
+              </label>
+              <label class="quiz-option-label" for="q5-opt2">
+                <input type="radio" id="q5-opt2" name="q5" value="2">
+                <span>C) They automatically encrypt network packets</span>
+              </label>
+              <label class="quiz-option-label" for="q5-opt3">
+                <input type="radio" id="q5-opt3" name="q5" value="3">
+                <span>D) They replace the requirement for CSS styles</span>
+              </label>
+            </div>
+            <div id="q5-feedback" class="quiz-explanation" style="display: none;"></div>
+          </fieldset>
+
+          <!-- Question 6 -->
+          <fieldset class="card quiz-card" id="q6-fieldset">
+            <legend class="quiz-legend">
+              <span class="badge">Question 6 of 10</span> &bull; <strong>Operating Systems</strong>
+              <span class="quiz-question-text">What term describes a state where two or more processes are permanently halted because each is waiting for a resource held by the other?</span>
+            </legend>
+            <div class="quiz-options-group">
+              <label class="quiz-option-label" for="q6-opt0">
+                <input type="radio" id="q6-opt0" name="q6" value="0" required>
+                <span>A) Thrashing</span>
+              </label>
+              <label class="quiz-option-label" for="q6-opt1">
+                <input type="radio" id="q6-opt1" name="q6" value="1">
+                <span>B) Deadlock</span>
+              </label>
+              <label class="quiz-option-label" for="q6-opt2">
+                <input type="radio" id="q6-opt2" name="q6" value="2">
+                <span>C) Context Switching</span>
+              </label>
+              <label class="quiz-option-label" for="q6-opt3">
+                <input type="radio" id="q6-opt3" name="q6" value="3">
+                <span>D) Segmentation Fault</span>
+              </label>
+            </div>
+            <div id="q6-feedback" class="quiz-explanation" style="display: none;"></div>
+          </fieldset>
+
+          <!-- Question 7 -->
+          <fieldset class="card quiz-card" id="q7-fieldset">
+            <legend class="quiz-legend">
+              <span class="badge">Question 7 of 10</span> &bull; <strong>Web Protocols</strong>
+              <span class="quiz-question-text">Which HTTP response status code indicates that a new resource was successfully created on the server?</span>
+            </legend>
+            <div class="quiz-options-group">
+              <label class="quiz-option-label" for="q7-opt0">
+                <input type="radio" id="q7-opt0" name="q7" value="0" required>
+                <span>A) 200 OK</span>
+              </label>
+              <label class="quiz-option-label" for="q7-opt1">
+                <input type="radio" id="q7-opt1" name="q7" value="1">
+                <span>B) 201 Created</span>
+              </label>
+              <label class="quiz-option-label" for="q7-opt2">
+                <input type="radio" id="q7-opt2" name="q7" value="2">
+                <span>C) 204 No Content</span>
+              </label>
+              <label class="quiz-option-label" for="q7-opt3">
+                <input type="radio" id="q7-opt3" name="q7" value="3">
+                <span>D) 304 Not Modified</span>
+              </label>
+            </div>
+            <div id="q7-feedback" class="quiz-explanation" style="display: none;"></div>
+          </fieldset>
+
+          <!-- Question 8 -->
+          <fieldset class="card quiz-card" id="q8-fieldset">
+            <legend class="quiz-legend">
+              <span class="badge">Question 8 of 10</span> &bull; <strong>Data Structures</strong>
+              <span class="quiz-question-text">Which data structure operates strictly on a Last-In, First-Out (LIFO) order?</span>
+            </legend>
+            <div class="quiz-options-group">
+              <label class="quiz-option-label" for="q8-opt0">
+                <input type="radio" id="q8-opt0" name="q8" value="0" required>
+                <span>A) Queue</span>
+              </label>
+              <label class="quiz-option-label" for="q8-opt1">
+                <input type="radio" id="q8-opt1" name="q8" value="1">
+                <span>B) Binary Search Tree</span>
+              </label>
+              <label class="quiz-option-label" for="q8-opt2">
+                <input type="radio" id="q8-opt2" name="q8" value="2">
+                <span>C) Stack</span>
+              </label>
+              <label class="quiz-option-label" for="q8-opt3">
+                <input type="radio" id="q8-opt3" name="q8" value="3">
+                <span>D) Hash Table</span>
+              </label>
+            </div>
+            <div id="q8-feedback" class="quiz-explanation" style="display: none;"></div>
+          </fieldset>
+
+          <!-- Question 9 -->
+          <fieldset class="card quiz-card" id="q9-fieldset">
+            <legend class="quiz-legend">
+              <span class="badge">Question 9 of 10</span> &bull; <strong>Database Systems</strong>
+              <span class="quiz-question-text">In an SQL query, which clause is specifically used to filter rows after an aggregate function (such as <code>COUNT()</code> or <code>AVG()</code>) has been evaluated?</span>
+            </legend>
+            <div class="quiz-options-group">
+              <label class="quiz-option-label" for="q9-opt0">
+                <input type="radio" id="q9-opt0" name="q9" value="0" required>
+                <span>A) WHERE</span>
+              </label>
+              <label class="quiz-option-label" for="q9-opt1">
+                <input type="radio" id="q9-opt1" name="q9" value="1">
+                <span>B) HAVING</span>
+              </label>
+              <label class="quiz-option-label" for="q9-opt2">
+                <input type="radio" id="q9-opt2" name="q9" value="2">
+                <span>C) GROUP BY</span>
+              </label>
+              <label class="quiz-option-label" for="q9-opt3">
+                <input type="radio" id="q9-opt3" name="q9" value="3">
+                <span>D) ORDER BY</span>
+              </label>
+            </div>
+            <div id="q9-feedback" class="quiz-explanation" style="display: none;"></div>
+          </fieldset>
+
+          <!-- Question 10 -->
+          <fieldset class="card quiz-card" id="q10-fieldset">
+            <legend class="quiz-legend">
+              <span class="badge">Question 10 of 10</span> &bull; <strong>Accessibility Guidelines</strong>
+              <span class="quiz-question-text">Under WCAG 2.1 Level AA standards, what is the minimum required color contrast ratio for regular body text against its background?</span>
+            </legend>
+            <div class="quiz-options-group">
+              <label class="quiz-option-label" for="q10-opt0">
+                <input type="radio" id="q10-opt0" name="q10" value="0" required>
+                <span>A) 3.0 : 1</span>
+              </label>
+              <label class="quiz-option-label" for="q10-opt1">
+                <input type="radio" id="q10-opt1" name="q10" value="1">
+                <span>B) 4.5 : 1</span>
+              </label>
+              <label class="quiz-option-label" for="q10-opt2">
+                <input type="radio" id="q10-opt2" name="q10" value="2">
+                <span>C) 7.0 : 1</span>
+              </label>
+              <label class="quiz-option-label" for="q10-opt3">
+                <input type="radio" id="q10-opt3" name="q10" value="3">
+                <span>D) 10.0 : 1</span>
+              </label>
+            </div>
+            <div id="q10-feedback" class="quiz-explanation" style="display: none;"></div>
+          </fieldset>
+
+          <!-- Submission Controls -->
+          <div class="quiz-action-bar">
+            <button type="submit" id="submit-quiz-btn" class="btn btn-primary" style="font-size: 1.05rem; padding: 0.75rem 2rem;">
+              Submit Answers &amp; View Score
+            </button>
+            <button type="button" id="reset-quiz-btn" class="btn btn-secondary" style="display: none;">
+              Retake Quiz
+            </button>
+          </div>
+
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-col">
+          <h3>CSE Academic Portal</h3>
+          <p>Curated by Asin for Computer Science Engineering students.</p>
+          <p>Accessible, responsive, and standards-compliant.</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Quick Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Welcome</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Standards &amp; Accessibility</h3>
+          <p>
+            Built using semantic HTML5, high-contrast typography, and full keyboard operability.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Asin. Computer Science &amp; Engineering Academic Portal.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
